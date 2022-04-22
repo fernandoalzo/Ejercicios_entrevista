@@ -35,7 +35,8 @@ async def get_data():
             numeros_pares.clear()
             numeros_impares.clear()
             numeros_primos.clear()
-            print(info)
+            for item in info.items():
+                print(item)
             time.sleep(60)
 
 if __name__ == "__main__":       
