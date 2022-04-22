@@ -4,7 +4,7 @@ import time
 import json
 from func import funciones
 
-async def hello_world():
+async def get_data():
     uri = "ws://209.126.82.146:8080"
     async with websockets.connect(uri) as websocket:
         data = []
@@ -35,9 +35,8 @@ async def hello_world():
             numeros_pares.clear()
             numeros_impares.clear()
             numeros_primos.clear()
-            print(info.values())
+            print(info)
             time.sleep(60)
 
 if __name__ == "__main__":       
-    asyncio.get_event_loop().run_until_complete(hello_world())
-    print(hello_world())
+    asyncio.get_event_loop().run_until_complete(get_data())
