@@ -1,7 +1,5 @@
 # Ejercicios_entrevista
 
-Usar en entorno Linux
-
 Adjuntos los ejecicios solicitados:
 
 -Instalacion:
