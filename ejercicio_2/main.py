@@ -43,7 +43,7 @@ if __name__ == "__main__":
             opcion = input("Digite el numero de la opcion => ")
             
             if opcion == "2":
-                os.system("cls")
+                os.system("clear")
                 print("\n\n[2]. crear un nuevo registro")
                 nombre = input("Digite el nombre del ususario => ")
                 apellidos = input("Digite ls apellidos del ususario => ")
@@ -69,8 +69,8 @@ if __name__ == "__main__":
                 getch.getch()
 
                 
-            elif opcion == "cls":
-                os.system("cls")    
+            elif opcion == "clear":
+                os.system("clear")    
                 print(banner)
 
             check_contenido_bd = os.path.getsize("usuarios.json")
