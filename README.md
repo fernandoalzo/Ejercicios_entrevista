@@ -1,5 +1,8 @@
 # Ejercicios_entrevista
 
+Nota:
+Por favor usar en un entorno de Windows.
+
 Adjuntos los ejecicios solicitados:
 
 -Instalacion:
