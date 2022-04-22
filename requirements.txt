@@ -1,0 +1,4 @@
+prettytable==2.1.0
+websockets==9.1
+sympy==1.10.1
+getch==1.0
