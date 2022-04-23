@@ -1,8 +1,14 @@
 from usuario import usuario
 import os
 from prettytable import PrettyTable
-#import msvcrt
-import getch
+import platform
+ # plataforma = platform.system()
+if platform.system() == "Windows":
+    import msvcrt
+    so = msvcrt
+if platform.system() == "Linux":
+    import getch
+    so = getch
 
 if __name__ == "__main__":
     
@@ -66,7 +72,7 @@ if __name__ == "__main__":
                         print("Ocurrio un error...")
 
                 print("\n\nPresione una tecla para continuar...\n\n")
-                getch.getch()
+                so.getch()
 
                 
             elif opcion == "clear":
@@ -77,7 +83,7 @@ if __name__ == "__main__":
             if check_contenido_bd == 0:
                 print("\nEl archivo de usuarios esta Vacio...")
                 print("\n\nPresione una tecla para continuar...\n\n")
-                getch.getch()
+                so.getch()
 
             elif check_contenido_bd != 0:                   
                 if opcion == "1":
@@ -90,7 +96,7 @@ if __name__ == "__main__":
                             tabla1.add_row([registro["Nombre"], registro["Apellidos"], registro["edad"], registro["email"]])
                         print(tabla1)
                     print("\n\nPresione una tecla para continuar...\n\n")
-                    getch.getch()
+                    so.getch()
                     
                 elif opcion == "3":
                     print("[3]. ver informacion de un usario\n")
@@ -107,7 +113,7 @@ if __name__ == "__main__":
                         print(tabla5)
 
                     print("\n\nPresione una tecla para continuar...\n\n")
-                    getch.getch()
+                    so.getch()
                 
                 elif opcion == "4":
                     print("[4]. editar un registro\n")
@@ -138,7 +144,7 @@ if __name__ == "__main__":
                         print("\nRegistro Actualizado...\n")
                         print(tabla3)
                     print("\n\nPresione una tecla para continuar...\n\n")
-                    getch.getch()
+                    so.getch()
                 
                 elif opcion == "5":
                     print("[5]. Eliminar un usuario")
@@ -160,14 +166,13 @@ if __name__ == "__main__":
                         else:
                             print("\n Operacion Cancelada...")
                     print("\n\nPresione una tecla para continuar...\n\n")
-                    getch.getch()
-                                
+                    so.getch()                                
                             
             else:
                 print("-----------------")
                 print("opcion no valida!!!")
                 print("-----------------")
                 print("\n\nPresione una tecla para continuar...\n\n")
-                getch.getch()
+                so.getch()
                     
 
