@@ -2,13 +2,14 @@ from usuario import usuario
 import os
 from prettytable import PrettyTable
 import platform
- # plataforma = platform.system()
 if platform.system() == "Windows":
     import msvcrt
     so = msvcrt
+    limpiar = os.system("cls")
 if platform.system() == "Linux":
     import getch
     so = getch
+    limpiar = os.system("clear")
 
 if __name__ == "__main__":
     
@@ -49,7 +50,7 @@ if __name__ == "__main__":
             opcion = input("Digite el numero de la opcion => ")
             
             if opcion == "2":
-                os.system("clear")
+                limpiar
                 print("\n\n[2]. crear un nuevo registro")
                 nombre = input("Digite el nombre del ususario => ")
                 apellidos = input("Digite ls apellidos del ususario => ")
@@ -75,8 +76,8 @@ if __name__ == "__main__":
                 so.getch()
 
                 
-            elif opcion == "clear":
-                os.system("clear")    
+            elif opcion == "cls":
+                limpiar  
                 print(banner)
 
             check_contenido_bd = os.path.getsize("usuarios.json")
